@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Member last login</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Member id</th>
+        <th>Login time</th>
+        <th>Last login time</th>
+      </tr>
+      <tal:repeat repeat="member view/memberinfo">
+        <tr>
+          <td tal:content="member/id" />
+          <td tal:content="member/login_time" />
+          <td tal:content="member/last_login_time" />
+        </tr>
+      </tal:repeat>
+    </table>
+  </body>
+</html>
