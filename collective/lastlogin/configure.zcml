@@ -8,9 +8,9 @@
   <browser:page
       for="*"
       class=".view.LastLogin"
-      name="last_login"
+      name="lastlogin"
       permission="cmf.ManagePortal"
-      template="last_login.pt"
+      template="lastlogin.pt"
       />
 
 </configure>

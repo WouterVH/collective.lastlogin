@@ -1,14 +1,18 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1'
+versionfile = open(os.path.join('collective', 'lastlogin', 'version.txt'))
+version = versionfile.read().strip()
+versionfile.close()
+
 
 setup(name='collective.lastlogin',
       version=version,
-      description="",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      description="Show the list of Plone users with the last login date.",
+      long_description=\
+          open(os.path.join('collective', 'lastlogin', 'README.txt')).read() +
+          '\n' +
+          open(os.path.join('collective', 'lastlogin', 'HISTORY.txt')).read(),
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
