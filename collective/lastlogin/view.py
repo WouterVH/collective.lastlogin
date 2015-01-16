@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
 
