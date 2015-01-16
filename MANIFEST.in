@@ -1,0 +1,6 @@
+include *.txt
+include *.rst
+include *
+
+recursive-include docs *
+recursive-include collective *
