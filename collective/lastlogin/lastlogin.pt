@@ -8,21 +8,32 @@
 </head>
 
 <body>
+
+
   <div metal:fill-slot="body">
-    <table>
+
+    <h1 class="documentFirstHeading">Members - Last login </h1>
+
+    <table class="listing" id="members-last-login">
+      <thead>
       <tr>
         <th>Member id</th>
         <th>Login time</th>
         <th>Last login time</th>
       </tr>
+      </thead>
+
+      <tbody>
       <tal:repeat repeat="member view/memberinfo">
         <tr>
-          <td tal:content="member/id" />
+          <td><a tal:attributes="href member/author_url" tal:content="member/id"></a> </td>
           <td tal:content="member/login_time" />
           <td tal:content="member/last_login_time" />
         </tr>
       </tal:repeat>
+      </tbody>
     </table>
+
   </div>
 
 </body>
